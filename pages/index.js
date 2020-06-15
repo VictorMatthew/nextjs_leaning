@@ -7,7 +7,6 @@ import Date from '../components/date'
 import Counter from '../Counter'
 
 
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -21,7 +20,11 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Head>…</Head>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Link href="/auth/login">Login</Link>
+
       <Counter/>
       <section className={utilStyles.headingMd}>…</section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
